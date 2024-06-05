@@ -11,6 +11,6 @@ echo example.com | assetfinder | httprobe| subjs | gofinder
 ## install
 
 ```
-go install -v github.com/punishell/gofinder@latest
+go install -v github.com/punishell/gofinder@v0.1.1
 ```
 
