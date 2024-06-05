@@ -44,6 +44,7 @@ var regexPatterns = map[string]string{
 }
 
 const redColor = "\033[31m"
+const greenColor = "\033[32m"
 const resetColor = "\033[0m"
 
 func main() {
@@ -70,6 +71,7 @@ func main() {
 			if len(matches) > 0 {
 				fmt.Printf("%sMatches for %s:%s\n", redColor, name, resetColor)
 				for _, match := range matches {
+					fmt.Printf("%s%s%s\n", greenColor, url, resetColor)
 					fmt.Println(match)
 				}
 			}
