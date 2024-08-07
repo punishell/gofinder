@@ -14,7 +14,7 @@ var regexPatterns = map[string]string{
 	"firebase":                      `AAAA[A-Za-z0-9_-]{7}:[A-Za-z0-9_-]{140}`,
 	"google_captcha":                `6L[0-9A-Za-z-_]{38}|^6[0-9a-zA-Z_-]{39}$`,
 	"google_oauth":                  `ya29\.[0-9A-Za-z\-_]+`,
-	"amazon_aws_access_key_id":      `A[SK]IA[0-9A-Z]{16}`,
+	"amazon_aws_access_key_id":      `AKIA[0-9A-Z]{16}|ASIA[0-9A-Z]{16}`,
 	"amazon_mws_auth_toke":          `amzn\.mws\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}`,
 	"amazon_aws_url":                `s3\.amazonaws.com[/]+|[a-zA-Z0-9_-]*\.s3\.amazonaws.com`,
 	"amazon_aws_url2":               `[a-zA-Z0-9-._]+\.s3\.amazonaws\.com|s3://[a-zA-Z0-9-._]+|s3-[a-zA-Z0-9-._/]+|s3.amazonaws.com/[a-zA-Z0-9-._]+|s3.console.aws.amazon.com/s3/buckets/[a-zA-Z0-9-._]+`,
@@ -40,7 +40,6 @@ var regexPatterns = map[string]string{
 	"slack_token":                   `"api_token":"(xox[a-zA-Z]-[a-zA-Z0-9-]+)"`,
 	"SSH_privKey":                   `([-]+BEGIN [^\s]+ PRIVATE KEY[-]+[\s]*[^-]*[-]+END [^\s]+ PRIVATE KEY[-]+)`,
 	"Heroku API KEY":                `[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}`,
-	"possible_Creds":                `(?i)(password\s*[` + "`" + `=:"']+\s*[^\s]+|password is\s*[` + "`" + `=:"']*\s*[^\s]+|pwd\s*[` + "`" + `=:"']*\s*[^\s]+|passwd\s*[` + "`" + `=:"']+\s*[^\s]+)`,
 }
 
 const redColor = "\033[31m"
